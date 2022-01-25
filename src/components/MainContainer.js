@@ -1,5 +1,6 @@
 import React, { useState , useEffect } from "react";
 import HeroBattleContainer from "./HeroBattleContainer"
+import HeroList from "./HeroList"
 
 
 function MainContainer() {
@@ -14,19 +15,13 @@ function MainContainer() {
       }, []) 
     
     return (
-        <>
+        <main>
         <h1>MAINCONTAINER</h1>
-        {/* <HeroBattleContainer characterData={characters}/> */}
-        </>
+        <HeroList characterData={characters}/>
+        </main>
     );
 
 }
-
-
-
-
-
-
 
 
 
