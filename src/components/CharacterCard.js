@@ -1,16 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 
-function CharacterCard({ heroName, name, quirk, pwrLvl, speedLvl, technique, image, battleImg }) {
-    
+function CharacterCard({ data, handleCharClick }) {
+    const {heroName, name, quirk, pwrLvl, speedLvl, technique, image, battleImg} = data
+    //Listed Character Items for the sides of the page  Villian/Hero Containers.
     return (
         <li className="character-card">
-            <img src={image} alt={heroName} />
+            <img onClick={() => { handleCharClick(data) }} src={null} alt={heroName} />
             <h2>{heroName}</h2>
             <h4>{name}</h4>
-            <p>Quirk:{quirk}</p>
-            <p>Power:{pwrLvl}</p>
-            <p>Speed:{speedLvl}</p>
-            <p>Technique:{technique}</p>
         </li>
     );
 }

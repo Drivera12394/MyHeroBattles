@@ -1,8 +1,14 @@
 import React from "react";
-import HeroList from "react";
+import BattleCard from "./BattleCards";
 
-function HeroBattleContainer({characterData}) {
+function HeroBattleContainer({characterData, handleRemove}) {
 
+    return (
+        <div>
+            {characterData.map(char => <BattleCard handleRemove={handleRemove}  {...char}/>)} 
+        </div>
+       
+    )
 }
 
 

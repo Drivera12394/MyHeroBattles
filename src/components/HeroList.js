@@ -1,11 +1,11 @@
 import React from 'react';
 import CharacterCard from './CharacterCard';
 
-function HeroList({characterData}) {
+function CharList({characterData, handleCharClick}) {
     
     return (
         <ul>
-            {characterData.map((characterObj) => <CharacterCard key={characterObj.id} {...characterObj}/>)}
+            {characterData.map((characterObj) => <CharacterCard handleCharClick={handleCharClick} key={characterObj.id} data={characterObj}/>)}
         </ul>
     );
     
@@ -14,4 +14,4 @@ function HeroList({characterData}) {
 
 
 
-export default HeroList;
+export default CharList;

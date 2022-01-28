@@ -3,6 +3,7 @@ import React from "react";
 
 
 
+//Heroes should be set on the left side of the screen.
 
 
 
@@ -12,4 +13,4 @@ import React from "react";
 
 
 
-export default HeroContainer;
+// export default HeroContainer;
